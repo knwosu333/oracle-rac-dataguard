@@ -1,0 +1,11 @@
+# Data Guard Broker read-only health-check examples
+# Start: dgmgrl /
+
+SHOW CONFIGURATION;
+SHOW DATABASE VERBOSE '<primary_db_unique_name>';
+SHOW DATABASE VERBOSE '<standby_db_unique_name>';
+VALIDATE DATABASE '<primary_db_unique_name>';
+VALIDATE DATABASE '<standby_db_unique_name>';
+
+# Review configuration status, transport/apply lag, warnings,
+# database properties, and validation output before any role transition.
